@@ -2,6 +2,7 @@
   "name": "geoguesser",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://github.com/DenekD/geoguesser",
   "dependencies": {
     "@emotion/react": "^11.6.0",
     "@emotion/styled": "^11.6.0",
@@ -13,6 +14,7 @@
     "@testing-library/user-event": "^12.1.10",
     "firebase": "^9.4.1",
     "gh-pages": "^3.2.3",
+    "ghpages": "^0.0.10",
     "random-streetview": "^1.1.1",
     "react": "^17.0.2",
     "react-bootstrap": "^2.0.2",
@@ -33,6 +35,8 @@
     "yup": "^0.32.11"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
