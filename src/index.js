@@ -10,7 +10,7 @@ import { getFirebase } from "react-redux-firebase";
 import { getFirestore } from "@firebase/firestore";
 import firebase from "firebase/compat/app";
 import "./config/fbConfig"; // importujemy tak zeby sie połaczenie z firebase zainicjalizowało
-import { createStore, applyMiddleware, compose } from "redux";
+import { createStore, applyMiddleware } from "redux";
 import { createFirestoreInstance } from "redux-firestore";
 import rootReducer from "./store/reducers/rootReducer";
 import { composeWithDevTools } from "redux-devtools-extension";
@@ -38,7 +38,7 @@ const rrfProps = {
 };
 
 ReactDOM.render(
-  <React.Fragment>
+  <React.StrictMode>
     <Provider store={store}>
       <ReactReduxFirebaseProvider {...rrfProps}>
         {/* <AuthIsLoaded> */}
@@ -46,7 +46,7 @@ ReactDOM.render(
         {/* </AuthIsLoaded> */}
       </ReactReduxFirebaseProvider>
     </Provider>
-  </React.Fragment>,
+  </React.StrictMode>,
   document.getElementById("root")
 );
 
