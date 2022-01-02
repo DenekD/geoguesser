@@ -1,6 +1,6 @@
 import React from "react";
 import "./App.css";
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { HashRouter, Route, Switch } from "react-router-dom";
 
 // Components imports
 import GuessMap from "./components/GuessMap.js/GuessMap";
@@ -11,13 +11,13 @@ import GameResult from "./pages/GameResult/GameResult";
 import SignIn from "./pages/SignIn/SignIn";
 import SignUp from "./pages/SignUp/Signup";
 import TopScores from "./pages/TopScores/TopScores";
-import { useSelector } from "react-redux";
+// import { useSelector } from "react-redux";
 
 function App() {
   // useSelector((state) => console.log(state.firebase));
 
   return (
-    <BrowserRouter basename="/geoguesser">
+    <HashRouter basename="/geoguesser">
       <Layout>
         <Switch>
           <Route exact path="/">
@@ -41,7 +41,7 @@ function App() {
           </Route>
         </Switch>
       </Layout>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
