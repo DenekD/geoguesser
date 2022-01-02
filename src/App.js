@@ -17,7 +17,7 @@ function App() {
   // useSelector((state) => console.log(state.firebase));
 
   return (
-    <BrowserRouter basename="geoguesser">
+    <BrowserRouter basename="/geoguesser">
       <Layout>
         <Switch>
           <Route exact path="/">
