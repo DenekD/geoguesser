@@ -1,6 +1,6 @@
 import React from "react";
 import "./App.css";
-import { HashRouter, Route, Switch } from "react-router-dom";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 
 // Components imports
 import GuessMap from "./components/GuessMap.js/GuessMap";
@@ -17,7 +17,7 @@ function App() {
   // useSelector((state) => console.log(state.firebase));
 
   return (
-    <HashRouter basename="/geoguesser">
+    <BrowserRouter basename="/geoguesser">
       <Layout>
         <Switch>
           <Route exact path="/">
@@ -41,7 +41,7 @@ function App() {
           </Route>
         </Switch>
       </Layout>
-    </HashRouter>
+    </BrowserRouter>
   );
 }
 
