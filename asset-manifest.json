@@ -1,22 +1,22 @@
 {
   "files": {
     "main.css": "/DenekD/geoguesser/static/css/main.50c5b436.chunk.css",
-    "main.js": "/DenekD/geoguesser/static/js/main.a5c5024c.chunk.js",
-    "main.js.map": "/DenekD/geoguesser/static/js/main.a5c5024c.chunk.js.map",
+    "main.js": "/DenekD/geoguesser/static/js/main.d11d5b29.chunk.js",
+    "main.js.map": "/DenekD/geoguesser/static/js/main.d11d5b29.chunk.js.map",
     "runtime-main.js": "/DenekD/geoguesser/static/js/runtime-main.ccde4bf2.js",
     "runtime-main.js.map": "/DenekD/geoguesser/static/js/runtime-main.ccde4bf2.js.map",
-    "static/js/2.ab0ef0eb.chunk.js": "/DenekD/geoguesser/static/js/2.ab0ef0eb.chunk.js",
-    "static/js/2.ab0ef0eb.chunk.js.map": "/DenekD/geoguesser/static/js/2.ab0ef0eb.chunk.js.map",
+    "static/js/2.5d2c4d6c.chunk.js": "/DenekD/geoguesser/static/js/2.5d2c4d6c.chunk.js",
+    "static/js/2.5d2c4d6c.chunk.js.map": "/DenekD/geoguesser/static/js/2.5d2c4d6c.chunk.js.map",
     "static/js/3.16da1833.chunk.js": "/DenekD/geoguesser/static/js/3.16da1833.chunk.js",
     "static/js/3.16da1833.chunk.js.map": "/DenekD/geoguesser/static/js/3.16da1833.chunk.js.map",
     "index.html": "/DenekD/geoguesser/index.html",
     "static/css/main.50c5b436.chunk.css.map": "/DenekD/geoguesser/static/css/main.50c5b436.chunk.css.map",
-    "static/js/2.ab0ef0eb.chunk.js.LICENSE.txt": "/DenekD/geoguesser/static/js/2.ab0ef0eb.chunk.js.LICENSE.txt"
+    "static/js/2.5d2c4d6c.chunk.js.LICENSE.txt": "/DenekD/geoguesser/static/js/2.5d2c4d6c.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.ccde4bf2.js",
-    "static/js/2.ab0ef0eb.chunk.js",
+    "static/js/2.5d2c4d6c.chunk.js",
     "static/css/main.50c5b436.chunk.css",
-    "static/js/main.a5c5024c.chunk.js"
+    "static/js/main.d11d5b29.chunk.js"
   ]
 }
