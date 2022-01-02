@@ -1,0 +1,183 @@
+.nav {
+  height: var(--nav-height);
+  width: 100vw;
+  background: transparent;
+  color: rgb(196, 186, 186);
+  margin: 0px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  /* -webkit-transition: all 0.4s ease; */
+  /* transition: all 0.4s ease; */
+  text-align: center;
+  z-index: 1;
+}
+
+.logo {
+  min-width: 200px;
+  margin: 0;
+  padding: 30px;
+  font-size: 2rem;
+}
+.logo:hover {
+  cursor: pointer;
+}
+
+.list {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 0px auto;
+  z-index: 1;
+  font-size: 1rem;
+}
+
+.signinList {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 0px auto;
+  z-index: 1;
+  font-size: 1rem;
+  min-width: 142px;
+}
+
+.signinList li p {
+  padding: 10px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.signinList li p:hover {
+  cursor: pointer;
+}
+
+.hamburger {
+  min-width: 200px;
+  padding: 0 30px;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.list .item {
+  position: relative;
+}
+
+.list .item a {
+  box-sizing: border-box;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  width: 160px;
+  font-weight: bold;
+  position: relative;
+  color: rgb(196, 186, 186);
+  text-decoration: none;
+}
+
+.list .item a.active::after {
+  content: "";
+  width: 130px;
+  height: 45px;
+  background: #fff;
+  border-radius: 4px;
+  position: absolute;
+  display: block;
+  transform: skew(-10deg);
+  bottom: -13px;
+  left: 15px;
+  z-index: -2;
+  text-align: center;
+}
+.list .item a.active {
+  color: #000;
+  position: relative;
+  /* top: 27px; */
+}
+
+.list .item a:hover {
+  cursor: pointer;
+  color: #fff;
+}
+.list .item a.active:hover {
+  cursor: pointer;
+  color: #000;
+}
+
+.hamburger i {
+  background-color: #fff;
+  border-radius: 2px;
+  content: "";
+  display: block;
+  position: relative;
+  width: 30px;
+  height: 4px;
+  margin-bottom: 5px;
+  margin-left: auto;
+  z-index: 3;
+}
+.overlay {
+  position: fixed; /* Sit on top of the page content */
+  display: none;
+  width: 100%; /* Full width (cover the whole page) */
+  height: 100%; /* Full height (cover the whole page) */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0); /* Black background with opacity */
+  z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+  cursor: pointer; /* Add a pointer on hover */
+  opacity: 0;
+  transition: opacity 0.4s ease-out;
+}
+
+@media screen and (max-width: 1019px) {
+  .list,
+  .signinList {
+    position: absolute;
+    top: -100%;
+    padding-left: 0;
+    transition: top ease-out 0.5s, opacity ease-out 0.5s;
+    z-index: 3;
+  }
+
+  .list {
+    flex-direction: column;
+    justify-content: center;
+    left: calc(50vw - 65px);
+  }
+  .signinList {
+    justify-content: space-around;
+    left: calc(50vw - 55px);
+  }
+
+  .list.open {
+    top: 40vh;
+    opacity: 0.95;
+  }
+  .overlay.open {
+    display: block;
+    opacity: 0.95;
+  }
+  .signinList.open {
+    top: 15vh;
+  }
+  .list .item a {
+    height: 60px;
+    line-height: 60px;
+  }
+  .list .item a.active::after {
+    bottom: 8px;
+    left: 14px;
+  }
+}
+@media screen and (min-width: 1019px) {
+  .hamburger {
+    display: none;
+  }
+}

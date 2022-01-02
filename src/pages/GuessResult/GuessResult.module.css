@@ -1,0 +1,19 @@
+.container {
+  width: 100vw;
+}
+
+.next + div {
+  position: absolute;
+  /* z-index: 10; */
+  width: 50%;
+  height: 15vw;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: space-between;
+  align-items: center;
+  opacity: 0.6;
+  transition: all 0.2s ease-out;
+  width: 100%;
+  height: 80%;
+  z-index: 10;
+}

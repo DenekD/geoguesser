@@ -1,0 +1,80 @@
+.guessMap {
+  --width: 18vw;
+  position: absolute;
+  /* border: 1px red solid; */
+  z-index: 10;
+  width: 18vw;
+  height: 15vw;
+  bottom: 3vw;
+  right: 5vw;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: space-between;
+  align-items: center;
+  opacity: 0.6;
+  transition: all 0.2s ease-out;
+}
+
+.guessMap:hover {
+  width: 50vw;
+  height: 37vw;
+  opacity: 1;
+}
+
+.calculateBtn + div {
+  width: 100%;
+  height: 80%;
+  z-index: 10;
+}
+
+.calculateBtn {
+  bottom: 0px;
+  z-index: 10;
+  /* width: 17vw; */
+  height: 40px;
+  border: none;
+  background: #6cb928;
+  padding: 9px 34px;
+  border-radius: 45px;
+  /* font-size: 1rem; */
+  font-weight: bold;
+  text-transform: uppercase;
+  font-style: italic;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+
+  color: rgb(248, 246, 246);
+}
+
+.calculateBtn:hover,
+.calculateBtn + div:hover {
+  cursor: pointer;
+}
+
+.result {
+  position: absolute;
+  bottom: 80px;
+  width: 100%;
+  z-index: 20;
+  color: #fff;
+  background: linear-gradient(
+      180deg,
+      rgba(161, 155, 217, 0.6) 0%,
+      rgba(161, 155, 217, 0) 50%,
+      rgba(161, 155, 217, 0) 50%
+    ),
+    #563b9a;
+  box-shadow: inset 0 1px 0 hsla(0, 0%, 100%, 0.15),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.25);
+  padding: 9px 0;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.result span {
+  /* background-color: #3b3c4b; */
+  /* padding: 3px 15px; */
+  /* border-radius: 3px; */
+  color: rgb(177, 146, 106);
+}
