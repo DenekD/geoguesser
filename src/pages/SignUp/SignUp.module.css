@@ -15,10 +15,10 @@
   padding: 5px;
   width: 95%;
   border-radius: 5px;
-  /* border: #1d3557 2px solid; */
+  border: none;
   resize: none;
-  color: #1d3557;
   font-size: 1rem;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.4);
 }
 
 .form input {

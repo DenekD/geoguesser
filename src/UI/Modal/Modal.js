@@ -15,7 +15,7 @@ const Modal = () => {
   const modal = isOpen ? (
     <div className={classes.wrapper}>
       <div className={classes.modal}>
-        <p>if you want to play sign in first or sign up </p>
+        <p>if you want to play sign in or sign up first </p>
         <p>for lazy users:</p>
         <p>
           email: user1@gmail.com <br /> password: pass1234

@@ -76,7 +76,10 @@ const Layout = ({ children }) => {
               onClick={
                 item.text === "Logout"
                   ? () => dispatch(signOuting())
-                  : () => history.push(item.path)
+                  : () => {
+                      history.push(item.path);
+                      setIsClicked(false);
+                    }
               }
             >
               {item.text === "avatar" ? (
