@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/geoguesser/static/css/main.eb23ecdc.chunk.css",
-    "main.js": "/geoguesser/static/js/main.9f7700dd.chunk.js",
-    "main.js.map": "/geoguesser/static/js/main.9f7700dd.chunk.js.map",
+    "main.css": "/geoguesser/static/css/main.edc8b16c.chunk.css",
+    "main.js": "/geoguesser/static/js/main.a48dc801.chunk.js",
+    "main.js.map": "/geoguesser/static/js/main.a48dc801.chunk.js.map",
     "runtime-main.js": "/geoguesser/static/js/runtime-main.295edbb4.js",
     "runtime-main.js.map": "/geoguesser/static/js/runtime-main.295edbb4.js.map",
-    "static/js/2.fde1faa8.chunk.js": "/geoguesser/static/js/2.fde1faa8.chunk.js",
-    "static/js/2.fde1faa8.chunk.js.map": "/geoguesser/static/js/2.fde1faa8.chunk.js.map",
+    "static/js/2.fbeff847.chunk.js": "/geoguesser/static/js/2.fbeff847.chunk.js",
+    "static/js/2.fbeff847.chunk.js.map": "/geoguesser/static/js/2.fbeff847.chunk.js.map",
     "static/js/3.16da1833.chunk.js": "/geoguesser/static/js/3.16da1833.chunk.js",
     "static/js/3.16da1833.chunk.js.map": "/geoguesser/static/js/3.16da1833.chunk.js.map",
     "index.html": "/geoguesser/index.html",
-    "static/css/main.eb23ecdc.chunk.css.map": "/geoguesser/static/css/main.eb23ecdc.chunk.css.map",
-    "static/js/2.fde1faa8.chunk.js.LICENSE.txt": "/geoguesser/static/js/2.fde1faa8.chunk.js.LICENSE.txt"
+    "static/css/main.edc8b16c.chunk.css.map": "/geoguesser/static/css/main.edc8b16c.chunk.css.map",
+    "static/js/2.fbeff847.chunk.js.LICENSE.txt": "/geoguesser/static/js/2.fbeff847.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.295edbb4.js",
-    "static/js/2.fde1faa8.chunk.js",
-    "static/css/main.eb23ecdc.chunk.css",
-    "static/js/main.9f7700dd.chunk.js"
+    "static/js/2.fbeff847.chunk.js",
+    "static/css/main.edc8b16c.chunk.css",
+    "static/js/main.a48dc801.chunk.js"
   ]
 }
