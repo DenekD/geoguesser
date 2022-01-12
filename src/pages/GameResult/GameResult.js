@@ -33,16 +33,43 @@ const GameResult = ({ onLoad }) => {
 
   return (
     <div className={classes.container}>
-      <p>podsumowanie</p>
-      <p> game score: {score.toFixed(2)}</p>
-      {scores.map((score, index) => (
+      <p> Your score {score.toFixed(2)}</p>
+      <table className={classes.table}>
+        <thead className={classes.tabHead}>
+          <tr>
+            <th></th>
+            <th>score</th>
+            <th>distance [m]</th>
+          </tr>
+        </thead>
+        <tbody className={classes.tabBody}>
+          {scores.map((score, index) => (
+            <tr>
+              <th> guess {index + 1}</th>
+              <td>{score.score}</td>
+              <td>{score.distance}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+
+      {/* {scores.map((score, index) => (
+        <tr>
+        <th> guess {index +1}</th>
+        <td>{score.score}</td>
+        <td>{score.distance}</td>
+        </tr>
+      ))} */}
+
+      {/* {scores.map((score, index) => (
         <p>
           guess {index + 1}: score: {score.score} distance: {score.distance}
         </p>
-      ))}
+      ))} */}
 
       <button className={classes.btn} onClick={endGame}>
-        return to main menu
+        return to <br />
+        main menu
       </button>
       <button className={classes.btn} onClick={endGame}>
         play again

@@ -51,17 +51,17 @@ const Layout = ({ children }) => {
           GeoGuesser
         </div>
         <ul className={`${classes.list} ${isClicked ? classes.open : ""}`}>
-          <li className={classes.item}>
+          <li className={classes.item} onClick={() => setIsClicked(false)}>
             <NavLink activeClassName={classes.active} exact to="/">
               HOME
             </NavLink>
           </li>
-          <li className={classes.item}>
+          <li className={classes.item} onClick={() => setIsClicked(false)}>
             <NavLink activeClassName={classes.active} to="/TopScores">
               TOP SCORES
             </NavLink>
           </li>
-          <li className={classes.item}>
+          <li className={classes.item} onClick={() => setIsClicked(false)}>
             <NavLink activeClassName={classes.active} to="/About">
               ABOUT
             </NavLink>
@@ -75,7 +75,10 @@ const Layout = ({ children }) => {
               className={item.text === "avatar" ? classes.avatar : classes.item}
               onClick={
                 item.text === "Logout"
-                  ? () => dispatch(signOuting())
+                  ? () => {
+                      dispatch(signOuting());
+                      setIsClicked(false);
+                    }
                   : () => {
                       history.push(item.path);
                       setIsClicked(false);
