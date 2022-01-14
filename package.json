@@ -4,10 +4,7 @@
   "private": true,
   "homepage": "https://DenekD.github.io/geoguesser",
   "dependencies": {
-    "@emotion/react": "^11.6.0",
-    "@emotion/styled": "^11.6.0",
     "@hookform/resolvers": "^2.8.3",
-    "@mui/material": "^5.1.1",
     "@react-google-maps/api": "^2.5.0",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
@@ -29,7 +26,6 @@
     "redux-devtools-extension": "^2.13.9",
     "redux-firestore": "^0.15.0",
     "redux-thunk": "^2.4.0",
-    "styled-components": "^5.3.3",
     "web-vitals": "^1.0.1",
     "yup": "^0.32.11"
   },
