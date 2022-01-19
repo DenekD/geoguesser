@@ -3,14 +3,13 @@ import "./App.css";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 
 // Components imports
-import GuessMap from "./components/GuessMap.js/GuessMap";
-import Layout from "./components/Layout/Layout";
 import { StartGame } from "./pages/StartGame/StartGame";
-import Street from "./pages/StreetView/StreetView";
+import Layout from "./components/Layout/Layout";
 import GameResult from "./pages/GameResult/GameResult";
 import SignIn from "./pages/SignIn/SignIn";
 import SignUp from "./pages/SignUp/Signup";
 import TopScores from "./pages/TopScores/TopScores";
+import Game from "./pages/Game/Game";
 // import { useSelector } from "react-redux";
 
 function App() {
@@ -24,8 +23,7 @@ function App() {
             <StartGame />
           </Route>
           <Route path="/newGame">
-            <Street />
-            <GuessMap />
+            <Game />
           </Route>
           <Route path="/gameResult">
             <GameResult />

@@ -3,7 +3,7 @@ import classes from "./TableScore.module.css";
 
 const TableScore = (props) => {
   return (
-    <div className={classes.contanier}>
+    <div className={classes.contaier}>
       <p className={classes.title}>Highscores</p>
       <ol className={classes.list}>
         {props.scores &&

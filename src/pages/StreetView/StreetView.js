@@ -6,10 +6,12 @@ import { useLoadScript } from "@react-google-maps/api";
 import PlayerDashbord from "../../components/PlayerDashbord/PlayerDashbord";
 import LoadingSpinner from "../../UI/LoadingSpinner/LoadingSpinner";
 
+import classes from "./StreetView.module.css";
+
 const libraries = ["places"];
 
 const mapContainerStyle = {
-  height: "90vh",
+  height: "calc(100vh - 100px) ",
   width: "100vw",
 };
 
@@ -29,7 +31,7 @@ const Street = () => {
   if (!isLoaded) return <LoadingSpinner />;
 
   return (
-    <div>
+    <div className={classes.container}>
       <GoogleMap
         mapContainerStyle={mapContainerStyle}
         center={streetViewCoords}

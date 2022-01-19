@@ -1,5 +1,4 @@
 .guessMap {
-  --width: 18vw;
   position: absolute;
   /* border: 1px red solid; */
   z-index: 10;
@@ -19,6 +18,7 @@
   width: 50vw;
   height: 37vw;
   opacity: 1;
+  cursor: pointer;
 }
 
 .calculateBtn + div {
@@ -73,8 +73,23 @@
 }
 
 .result span {
-  /* background-color: #3b3c4b; */
-  /* padding: 3px 15px; */
-  /* border-radius: 3px; */
   color: rgb(177, 146, 106);
+}
+
+@media all and (max-width: 500px) {
+  .guessMap {
+    bottom: 0vh;
+    width: 90vw;
+    height: 15vh;
+    opacity: 0.3;
+  }
+  .guessMap:hover,
+  .guessMap:active,
+  .guessMap:focus {
+    width: 90vw;
+    height: 30vh;
+  }
+  .result {
+    bottom: 100%;
+  }
 }

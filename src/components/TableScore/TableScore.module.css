@@ -1,4 +1,4 @@
-.contanier {
+.contaier {
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -14,7 +14,6 @@
 }
 
 .list {
-  /* list-style: none; */
   font-size: 1.4rem;
   padding-left: 0;
 }
@@ -24,11 +23,9 @@
   border-bottom: #563b9a 3px solid;
   display: flex;
   width: 25vw;
-  /* justify-content: space-between; */
 }
 
 .list li span {
-  /* margin-left: 20px; */
 }
 
 .list li span:nth-child(1) {
@@ -40,4 +37,13 @@
 }
 .list li span:nth-child(3) {
   width: 80px;
+}
+
+@media all and (max-width: 500px) {
+  .contaier {
+    margin: 5vw 5vw;
+  }
+  .list li {
+    width: 70vw;
+  }
 }

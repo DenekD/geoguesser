@@ -2,6 +2,7 @@ import React from "react";
 import { useSelector } from "react-redux";
 import { isLoaded, useFirestoreConnect } from "react-redux-firebase";
 import TableScore from "../../components/TableScore/TableScore";
+import LoadingSpinner from "../../UI/LoadingSpinner/LoadingSpinner";
 
 const TopScores = () => {
   useFirestoreConnect([
@@ -12,7 +13,9 @@ const TopScores = () => {
   ]);
 
   const scores = useSelector((state) => state.firestore.ordered.topScores);
-  return <div>{<TableScore scores={scores} />}</div>;
+
+  const content = scores ? <TableScore scores={scores} /> : <LoadingSpinner />;
+  return <div>{content}</div>;
 };
 
 export default TopScores;

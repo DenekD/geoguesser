@@ -1,22 +1,10 @@
-import React, { useState } from "react";
-// import { useForm } from "react-hook-form";
-// import { yupResolver } from "@hookform/resolvers/yup";
+import React from "react";
 
 import { useDispatch, useSelector } from "react-redux";
 import { useHistory } from "react-router";
-// import * as yup from "yup";
 
 import classes from "./GameResult.module.css";
 import { addTopScore } from "../../store/actions/gameAction";
-
-// const schema = yup.object().shape({
-//   autor: yup.string().required(),
-//   quote: yup
-//     .string()
-//     .required("you must enter your name")
-//     .min(3, "name is too short - should be 3 chars minimum.")
-//     .matches(/[a-zA-Z]/, "quote can only contain Latin letters."),
-// });
 
 const GameResult = ({ onLoad }) => {
   const dispatch = useDispatch();
@@ -52,20 +40,6 @@ const GameResult = ({ onLoad }) => {
           ))}
         </tbody>
       </table>
-
-      {/* {scores.map((score, index) => (
-        <tr>
-        <th> guess {index +1}</th>
-        <td>{score.score}</td>
-        <td>{score.distance}</td>
-        </tr>
-      ))} */}
-
-      {/* {scores.map((score, index) => (
-        <p>
-          guess {index + 1}: score: {score.score} distance: {score.distance}
-        </p>
-      ))} */}
 
       <button className={classes.btn} onClick={endGame}>
         return to <br />
