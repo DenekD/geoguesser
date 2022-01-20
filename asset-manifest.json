@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/geoguesser/static/css/main.21f3be70.chunk.css",
-    "main.js": "/geoguesser/static/js/main.ace0cb33.chunk.js",
-    "main.js.map": "/geoguesser/static/js/main.ace0cb33.chunk.js.map",
+    "main.css": "/geoguesser/static/css/main.3046dc82.chunk.css",
+    "main.js": "/geoguesser/static/js/main.61c8a134.chunk.js",
+    "main.js.map": "/geoguesser/static/js/main.61c8a134.chunk.js.map",
     "runtime-main.js": "/geoguesser/static/js/runtime-main.66c03163.js",
     "runtime-main.js.map": "/geoguesser/static/js/runtime-main.66c03163.js.map",
     "static/js/2.ba9dd9da.chunk.js": "/geoguesser/static/js/2.ba9dd9da.chunk.js",
@@ -10,13 +10,13 @@
     "static/js/3.adfb7e09.chunk.js": "/geoguesser/static/js/3.adfb7e09.chunk.js",
     "static/js/3.adfb7e09.chunk.js.map": "/geoguesser/static/js/3.adfb7e09.chunk.js.map",
     "index.html": "/geoguesser/index.html",
-    "static/css/main.21f3be70.chunk.css.map": "/geoguesser/static/css/main.21f3be70.chunk.css.map",
+    "static/css/main.3046dc82.chunk.css.map": "/geoguesser/static/css/main.3046dc82.chunk.css.map",
     "static/js/2.ba9dd9da.chunk.js.LICENSE.txt": "/geoguesser/static/js/2.ba9dd9da.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.66c03163.js",
     "static/js/2.ba9dd9da.chunk.js",
-    "static/css/main.21f3be70.chunk.css",
-    "static/js/main.ace0cb33.chunk.js"
+    "static/css/main.3046dc82.chunk.css",
+    "static/js/main.61c8a134.chunk.js"
   ]
 }
