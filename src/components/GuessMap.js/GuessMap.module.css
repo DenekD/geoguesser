@@ -30,13 +30,11 @@
 .calculateBtn {
   bottom: 0px;
   z-index: 10;
-  /* width: 17vw; */
   height: 40px;
   border: none;
   background: #6cb928;
   padding: 9px 34px;
   border-radius: 45px;
-  /* font-size: 1rem; */
   font-weight: bold;
   text-transform: uppercase;
   font-style: italic;
