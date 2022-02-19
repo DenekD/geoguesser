@@ -6,33 +6,52 @@ import { Redirect } from "react-router";
 
 import { signUp } from "../../store/actions/authActions";
 
-import { useForm } from "react-hook-form";
-import { yupResolver } from "@hookform/resolvers/yup";
-import * as yup from "yup";
+import { Form, Formik } from "formik";
+import { FormikControl } from "../../formik/FormikControl";
+import * as Yup from "yup";
 
-import classes from "./SignUp.module.css";
+import classes from "../Sign-In-Up.module.css";
+import { countryList } from "../../helpers/coutriesList";
 
-const schema = yup.object().shape({
-  email: yup.string().email().required("No email provided."),
-  password: yup
-    .string()
+const initialValues = {
+  email: "",
+  password: "",
+  confirmedPassword: "",
+  nickName: "",
+  gender: "",
+  country: "",
+  birthDate: null,
+};
+const genderOptions = [
+  { key: "Male", value: "male" },
+  { key: "Female", value: "female" },
+];
+const dropDownCountryOptions = countryList;
+
+const validationSchema = Yup.object({
+  email: Yup.string().email().required("No email provided."),
+  password: Yup.string()
     .required("No password provided.")
     .min(8, "password is too short - should be 6 chars minimum.")
     .matches(/[a-zA-Z]/, "quote can only contain Latin letters."),
-  nickName: yup.string().required("No first name provided."),
+  confirmedPassword: Yup.string()
+    .oneOf(
+      [Yup.ref("password"), ""],
+      "The password confirmation does not match"
+    )
+    .required(),
+  nickName: Yup.string()
+    .min(3, "nickname is too short - should be 3 chars minimum.")
+    .required("No nickname provided."),
+  gender: Yup.string().required(),
+  country: Yup.string().required(),
+  birthDate: Yup.date().required().nullable(),
 });
 
 const SignUp = () => {
   const dispatch = useDispatch();
   // const authError = useSelector((state) => state.auth.authError);
   const auth = useSelector((state) => state.firebase.auth);
-
-  const {
-    register,
-    handleSubmit,
-    reset,
-    formState: { errors },
-  } = useForm({ resolver: yupResolver(schema) });
 
   if (isLoaded(auth) && !isEmpty(auth)) return <Redirect to="/" />;
 
@@ -44,45 +63,69 @@ const SignUp = () => {
         nickName: data.nickName,
       })
     );
-    reset();
   };
   return (
-    <div className={classes.container}>
-      <p className={classes.title}> Zarerejestruj się</p>
-
-      <form onSubmit={handleSubmit(submintHandler)} className={classes.form}>
-        <label htmlFor="email">email </label>
-        <input
-          {...register("email")}
-          type="text"
-          id="email"
-          className={errors.autor && classes.invalid}
-        />
-        <p className={classes.error}>{errors.email?.message}</p>
-
-        <label htmlFor="password">password </label>
-        <input
-          {...register("password")}
-          type="password"
-          id="password"
-          className={errors.autor && classes.invalid}
-        />
-        <p className={classes.error}>{errors.password?.message}</p>
-        <label htmlFor="nickName">nick name </label>
-        <input
-          {...register("nickName")}
-          type="text"
-          id="nickName"
-          className={errors.autor && classes.invalid}
-        />
-        <p className={classes.error}>{errors.nickName?.message}</p>
-
-        <button type="submit" className={classes.submit}>
-          zarejestruj się
-        </button>
-        {/* <div className="">{authError ? <p>{authError}</p> : null}</div> */}
-      </form>
-    </div>
+    <Formik
+      initialValues={initialValues}
+      validationSchema={validationSchema}
+      onSubmit={submintHandler}
+    >
+      {(formik) => (
+        <div className={classes.container}>
+          <p className={classes.title}> Zarerejestruj się</p>
+          <Form>
+            <FormikControl
+              control="input"
+              type="email"
+              label="Email"
+              name="email"
+            />
+            <FormikControl
+              control="input"
+              type="password"
+              label="Password"
+              name="password"
+            />
+            <FormikControl
+              control="input"
+              name="confirmedPassword"
+              type="password"
+              label="Confirmed Password"
+            />
+            <FormikControl
+              control="input"
+              type="text"
+              label="Nickname"
+              name="nickName"
+            />
+            <FormikControl
+              control="radio"
+              name="gender"
+              label="Gender"
+              options={genderOptions}
+            />
+            <FormikControl
+              name="country"
+              control="select"
+              options={dropDownCountryOptions}
+              label="Select Your Country"
+            />
+            <FormikControl
+              control="date"
+              name="birthDate"
+              label="Select your date of birth"
+            />
+            <button
+              type="submit"
+              disabled={!formik.isValid}
+              className={classes.submit}
+            >
+              Sing Up
+            </button>
+          </Form>
+        </div>
+      )}
+    </Formik>
   );
 };
 

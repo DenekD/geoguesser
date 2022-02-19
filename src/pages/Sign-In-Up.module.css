@@ -1,0 +1,35 @@
+.container {
+  width: 80%;
+  max-width: 400px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 40px 0 80px;
+}
+
+.title {
+  font-size: 2rem;
+}
+
+.submit {
+  color: #fff;
+  margin-top: 12px;
+  border: none;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  padding: 0.9375rem 2.75rem;
+  font-weight: 400;
+  background: #6cb928;
+  border-radius: 5px;
+  transition: 0.4s;
+}
+
+.submit:hover {
+  background-color: #94e64d;
+  color: #fff;
+  cursor: pointer;
+}
+.submit:disabled {
+  background-color: #8c8f8e;
+  color: rgb(60, 73, 62);
+  cursor: pointer;
+}

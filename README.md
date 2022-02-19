@@ -2,7 +2,7 @@ gra wzorowana na Geoguesser
 
 run aplication https://denekd.github.io/geoguesser/
 
-stack technologiczny: React, react-router-dom, react-redux-firebase, redux-firestore, @react-google-maps/api, random-streetview
+stack technologiczny: React, react-router-dom, react-redux-firebase, redux-firestore, @react-google-maps/api, random-streetview, formik, react-datepicker
 
 ## Applications features:
 
@@ -11,12 +11,16 @@ stack technologiczny: React, react-router-dom, react-redux-firebase, redux-fires
 - gra składa sie z pięciu rund
 - aplikacja wykorzystuje firebase jako baze danych do przechowywania top Scores uzytkowników,
 - aplikacja posiada system rejestracji i logowania użytkowników
+  ![alt text](./githubImages/1.png)
+  ![alt text](./githubImages/2.png)
+  ![alt text](./githubImages/3.png)
 
 ## Authentication:
 
 - możliwość rejestracji nowych użytkowników i logowania
 - poprzez firebase authentication, Sign-in method: Email/Password
 - tylko zalogowani użytkownicy mogą zagrać
+- obsługa formularza przez Formik
 - for lazy uzers:
 
   email: user1@test.com  
@@ -24,6 +28,8 @@ stack technologiczny: React, react-router-dom, react-redux-firebase, redux-fires
 
   email: user2@gmail.com  
    password: pass1234
+
+  ![alt text](./githubImages/4.png)
 
 ## State management:
 

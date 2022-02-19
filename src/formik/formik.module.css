@@ -1,0 +1,50 @@
+.form-control {
+  margin-bottom: 25px;
+}
+
+.form-control label {
+  font-weight: bold;
+  display: flex;
+  font-size: 18px;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+.form-control input[type="text"],
+.form-control input[type="email"],
+.form-control input[type="password"],
+.form-control textarea,
+.form-control select {
+  display: block;
+  width: 400px;
+  padding: 15px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.form-control input[type="radio"] {
+  /* width: 400px; */
+  /* padding: 15px;
+  font-size: 10px; */
+  margin-right: 7px;
+  margin-left: 20px;
+}
+
+.form-control input[type="radio"] + label {
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.form-control select {
+  width: 430px;
+}
+
+.form-control .error {
+  color: red;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
